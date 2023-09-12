@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class GroetTest extends TestCase
+final class GreeterTest extends TestCase
 {
 	public function testCanGreetByName()
 	{
 		$this->assertEquals(
 			'Hello Marie Curie.',
-			(new Groet())('Marie Curie')
+			(new Greeter())('Marie Curie')
 		);
 	}
 
@@ -18,7 +18,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'Hello friend.',
-			(new Groet())(null)
+			(new Greeter())(null)
 		);
 	}
 
@@ -26,7 +26,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'HELLO ROSALIND FRANKLIN.',
-			(new Groet())('ROSALIND FRANKLIN')
+			(new Greeter())('ROSALIND FRANKLIN')
 		);
 	}
 
@@ -34,7 +34,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'Hello Jane Goodall and Ada Lovelace.',
-			(new Groet())(['Jane Goodall', 'Ada Lovelace'])
+			(new Greeter())(['Jane Goodall', 'Ada Lovelace'])
 		);
 	}
 
@@ -42,7 +42,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'Hello Grace Hopper, Emmy Noether and Chien-Shiung Wu.',
-			(new Groet())(['Grace Hopper', 'Emmy Noether', 'Chien-Shiung Wu'])
+			(new Greeter())(['Grace Hopper', 'Emmy Noether', 'Chien-Shiung Wu'])
 		);
 	}
 
@@ -50,7 +50,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'Hello Rosalind Franklin, Curie and Ada Lovelace. AND HELLO MARIE CURIE, JANE GOODALL AND BARBARA MCCLINTOCK.',
-			(new Groet())(['MARIE CURIE', 'Rosalind Franklin', 'JANE GOODALL', 'Curie', 'Ada Lovelace', 'BARBARA MCCLINTOCK'])
+			(new Greeter())(['MARIE CURIE', 'Rosalind Franklin', 'JANE GOODALL', 'Curie', 'Ada Lovelace', 'BARBARA MCCLINTOCK'])
 		);
 	}
 
@@ -58,7 +58,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'Hello Rachel Carson, Dorothy Crowfoot Hodgkin, Barbara McClintock, Mae Jemison and Rita Levi-Montalcini.',
-			(new Groet())(['Rachel Carson, Dorothy Crowfoot Hodgkin, Barbara McClintock', 'Mae Jemison', 'Rita Levi-Montalcini'])
+			(new Greeter())(['Rachel Carson, Dorothy Crowfoot Hodgkin, Barbara McClintock', 'Mae Jemison', 'Rita Levi-Montalcini'])
 		);
 	}
 
@@ -66,7 +66,7 @@ final class GroetTest extends TestCase
 	{
 		$this->assertEquals(
 			'Hello Rosalind Franklin, Curie, Dorothy Crowfoot Hodgkin, Chien-Shiung Wu, friend and Barbara McClintock. AND HELLO LOUISE PEARCE, JANE GOODALL AND RACHEL CARSON.',
-			(new Groet())(['LOUISE PEARCE', 'Rosalind Franklin, Curie', 'JANE GOODALL, RACHEL CARSON', 'Dorothy Crowfoot Hodgkin, Chien-Shiung Wu', null, 'Barbara McClintock'])
+			(new Greeter())(['LOUISE PEARCE', 'Rosalind Franklin, Curie', 'JANE GOODALL, RACHEL CARSON', 'Dorothy Crowfoot Hodgkin, Chien-Shiung Wu', null, 'Barbara McClintock'])
 		);
 	}
 }

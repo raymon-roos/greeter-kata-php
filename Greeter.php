@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class Groet
+class Greeter
 {
 	public function __invoke(null|string|array $names): string
 	{

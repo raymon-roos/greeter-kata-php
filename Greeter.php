@@ -70,10 +70,6 @@ class Greeter
 			$names = implode(', ', $names);
 		}
 
-		if (is_string($names)) {
-			$names = explode(', ', $names);
-		}
-
-		return $names;
+		return explode(', ', $names);
 	}
 }
